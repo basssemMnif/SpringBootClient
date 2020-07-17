@@ -42,7 +42,7 @@ public class PostServiceImpl implements IPostService{
 		postRepository.deleteById(id);
 	}
 	@Override
-	public void likePoste(Long id) {
+	public void likePost(Long id) {
 		Post p = postRepository.findById(id).orElseThrow(IllegalStateException::new);
 		p.setNbLikes(p.getNbLikes()+1);
 		postRepository.save(p);
@@ -50,8 +50,8 @@ public class PostServiceImpl implements IPostService{
 	}
 
 	@Override
-	public Post searchPostByCategorie(Long id,String name) {
-		Post p = postRepository.findPostByCategorie(id, name);
+	public Post findPostByCategorie(String cat) {
+		Post p = postRepository.findPostByCategorie(cat);
 		return p;
 	}
 }

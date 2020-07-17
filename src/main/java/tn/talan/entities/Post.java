@@ -21,7 +21,7 @@ public class Post {
 	@Column(name = "Description")
 	private String description ;
 	
-	@Column(name = "Date d'ajout")
+	@Column(name = "Datedajout")
 	private Date dateajout;
 	
 	@Column(name = "Localisation")
@@ -33,7 +33,6 @@ public class Post {
 	@Column(name = "nbLikes")
 	private int nbLikes;
 	
-	@Column(name = "Categorie")
 	@ManyToOne
 	private Categorie categorie;
 
