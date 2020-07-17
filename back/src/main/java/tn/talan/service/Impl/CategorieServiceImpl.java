@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import tn.talan.entities.Categorie;
 import tn.talan.repository.CategorieRepository;
-import tn.talan.repository.PostRepository;
 import tn.talan.service.ICategorieService;
 @Service
 
