@@ -21,4 +21,10 @@ export class PostService {
   deletePost(id: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
   }
+  getPost(id: number): Observable<any> {
+    return this.http.get(`${this.baseUrl}/post/${id}`);
+  }
+  updatePost(post: Object): Observable<Object> {
+    return this.http.put(`${this.baseUrl}/UpdatePost`, post);
+  }
 }

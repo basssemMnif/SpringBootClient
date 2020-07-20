@@ -36,10 +36,10 @@ public class PostController {
 	 @PostMapping("/addPost")
 		@ResponseBody
 		public void addPost(@RequestBody Post poste) {
-		 System.out.println(poste);
+		 
 		 PostService.addPost(poste);
 		}
-	 @PutMapping
+	 @PutMapping("/UpdatePost")
 		@ResponseBody
 		public void modifyPost(@RequestBody Post poste) {
 		 PostService.updatePost(poste);
@@ -50,10 +50,19 @@ public class PostController {
 		 PostService.deletePost(idPoste);
 		}
 	 
-	 @GetMapping("/addLike/{id}")
+	 @PutMapping("/addLike/{id}")
 		@ResponseBody
 		public void likePoste(@PathVariable("id") Long id) {
 		 PostService.likePost(id);
 		}
+	 @GetMapping("/post/{id}")
+		public Post afficherJoueur(@PathVariable("id") Long idPost) {
+			return PostService.showPost(idPost);
+		}
+	 @GetMapping("/search/{cat}")
+		public Post searchByCategorie(@PathVariable("cat") String cat) {
+			return PostService.findPostByCategorie(cat);
+		}
+	 
 
 }

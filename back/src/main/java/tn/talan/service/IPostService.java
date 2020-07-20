@@ -12,4 +12,5 @@ public interface IPostService {
 	public void deletePost(Long id);
 	public void likePost(Long id) ;
 	public Post findPostByCategorie(String cat);
+	public Post showPost(Long idPost);
 }

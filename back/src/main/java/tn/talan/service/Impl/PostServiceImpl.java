@@ -54,4 +54,9 @@ public class PostServiceImpl implements IPostService{
 		Post p = postRepository.findPostByCategorie(cat);
 		return p;
 	}
+
+	@Override
+	public Post showPost(Long idPost) {
+		return postRepository.findById(idPost).orElseThrow(IllegalStateException::new);
+	}
 }

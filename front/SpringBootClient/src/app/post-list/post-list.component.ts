@@ -35,5 +35,8 @@ export class PostListComponent implements OnInit {
   PostDetails(id: number){
     this.router.navigate(['details', id]);
   }
+  PostUpdate(id:number){
+    this.router.navigate(['update', id]);
+  }
 
 }

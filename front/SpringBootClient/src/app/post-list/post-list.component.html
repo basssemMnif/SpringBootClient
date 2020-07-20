@@ -3,30 +3,20 @@
     <h2>Posts List</h2>
   </div>
   <div class="panel-body">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Titre</th>
-          <th>Description</th>
-          <th>Date d'ajout</th>
-          <th>Localisation</th>
-          <th>Prix</th>
-          <th>Nombres des likes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let post of posts | async">
-          <td>{{post.titre}}</td>
-          <td>{{post.description}}</td>
-          <td>{{post.dateajout |  date  }}</td>
-          <td>{{post.localisation}}</td>
-          <td>{{post.prix}}</td>
-          <td>{{post.nbLikes}}</td>
-          <td><button (click)="deletePost(post.id)" class="btn btn-danger">Delete</button>
+    <div class="container">
+      <div class="row">
+    <div *ngFor="let post of posts | async" class="card col-6 col-md-4" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{post.titre}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{post.dateajout |  date  }}</h6>
+        <p class="card-text">{{post.description}}</p>
+        <button (click)="deletePost(post.id)" class="btn btn-danger">Delete</button>
               <button (click)="PostDetails(post.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+              <button (click)="PostUpdate(post.id)" class="btn btn-success" style="margin-left: 10px">Update</button>
+              
+      </div>
+    </div>
+  </div>
+</div>
   </div>
 </div>
