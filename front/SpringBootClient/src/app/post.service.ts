@@ -27,4 +27,7 @@ export class PostService {
   updatePost(post: Object): Observable<Object> {
     return this.http.put(`${this.baseUrl}/UpdatePost`, post);
   }
+  like(id:number): Observable<any> {
+    return this.http.put(`${this.baseUrl}/addLike/${id}`, { responseType: 'text' });
+  }
 }

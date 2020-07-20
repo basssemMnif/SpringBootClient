@@ -27,5 +27,8 @@ export class PostDetailsComponent implements OnInit {
   list(){
     this.router.navigate(['/posts']);
   }
-
+like(id:number){
+  this.postService.like(id).subscribe(data => console.log(data), error => console.log(error));
+  location. reload() 
+}
 }
