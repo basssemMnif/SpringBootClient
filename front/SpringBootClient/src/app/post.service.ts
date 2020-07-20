@@ -30,4 +30,7 @@ export class PostService {
   like(id:number): Observable<any> {
     return this.http.put(`${this.baseUrl}/addLike/${id}`, { responseType: 'text' });
   }
+  search(cat:string): Observable<any> {
+    return this.http.get(`${this.baseUrl}/search/${cat}`);
+  }
 }

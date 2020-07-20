@@ -60,7 +60,8 @@ public class PostController {
 			return PostService.showPost(idPost);
 		}
 	 @GetMapping("/search/{cat}")
-		public Post searchByCategorie(@PathVariable("cat") String cat) {
+	 @ResponseBody
+		public List<Post>  searchByCategorie(@PathVariable("cat") String cat) {
 			return PostService.findPostByCategorie(cat);
 		}
 	 

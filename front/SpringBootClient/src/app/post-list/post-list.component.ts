@@ -11,13 +11,14 @@ import { Router } from '@angular/router';
 })
 export class PostListComponent implements OnInit {
   posts: Observable<Post[]>;
+  cat:string;
   constructor(private postService: PostService,
     private router: Router) { }
 
   ngOnInit() {
     this.reloadData();
     this.posts = this.postService.getPostsList();
-    console.log(this.posts)
+    
   }
   reloadData() {
     this.posts = this.postService.getPostsList();
@@ -38,5 +39,7 @@ export class PostListComponent implements OnInit {
   PostUpdate(id:number){
     this.router.navigate(['update', id]);
   }
-
+search(cat:string){
+  this.router.navigate(['search', cat]);
+}
 }

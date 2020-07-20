@@ -1,13 +1,8 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h2>Posts List</h2>
+    <h2>Search Results</h2>
   </div>
-  <div class="search-container">
-    <form>
-      <input type="text" placeholder="Search.." [(ngModel)]="cat"name="cat">
-      <button (click)="search(cat)" class="btn btn-info"  type="submit">Submit</button>
-    </form>
-  </div>
+ 
   <div class="panel-body">
     <div class="container">
       <div class="row">
@@ -24,5 +19,7 @@
     </div>
   </div>
 </div>
+<button (click)="list()" class="btn btn-primary ">Back to Post List</button><br>
+
   </div>
 </div>

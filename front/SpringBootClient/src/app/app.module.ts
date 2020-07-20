@@ -9,6 +9,7 @@ import { PostListComponent } from './post-list/post-list.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PostUpdateComponent } from './post-update/post-update.component';
+import { PostSearchComponent } from './post-search/post-search.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PostUpdateComponent } from './post-update/post-update.component';
     CreatePostComponent,
     PostDetailsComponent,
     PostListComponent,
-    PostUpdateComponent
+    PostUpdateComponent,
+    PostSearchComponent
   ],
   imports: [
     BrowserModule,

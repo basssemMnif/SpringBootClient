@@ -50,8 +50,8 @@ public class PostServiceImpl implements IPostService{
 	}
 
 	@Override
-	public Post findPostByCategorie(String cat) {
-		Post p = postRepository.findPostByCategorie(cat);
+	public List<Post>  findPostByCategorie(String cat) {
+		List<Post> p = postRepository.findPostByCategorieNom(cat);
 		return p;
 	}
 
