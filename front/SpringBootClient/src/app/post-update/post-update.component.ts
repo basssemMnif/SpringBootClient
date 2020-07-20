@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from '../post';
+import { Post } from '../entities/post';
 import { ActivatedRoute, Router } from '@angular/router';
-import { PostService } from '../post.service';
+import { PostService } from '../services/post.service';
 
 @Component({
   selector: 'app-post-update',

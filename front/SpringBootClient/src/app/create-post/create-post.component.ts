@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from '../post';
-import { PostService } from '../post.service';
+import { Post } from '../entities/post';
+import { PostService } from '../services/post.service';
 import { Router } from '@angular/router';
-import { Categorie } from '../categorie';
+import { Categorie } from '../entities/categorie';
 import { Observable } from 'rxjs';
 
 @Component({
